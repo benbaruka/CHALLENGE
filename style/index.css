@@ -32,15 +32,22 @@ html {
 
 .grid-item .text-overlay {
   position: absolute;
-  bottom: 5%;
+  bottom: 10%;
   left: 10%;
-  color: #ffffff;
-  font-size: 38px;
-  line-height: 38px;
-  font-weight: 700;
+
   width: 213px;
   height: 100px;
   gap: 8px;
   opacity: 0px;
   background: red;
+}
+.grid-item .text-overlay .text {
+  color: #ffffff;
+  font-size: 38px;
+  font-weight: 700;
+}
+.grid-item .text-overlay .country {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 400;
 }
