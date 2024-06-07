@@ -34,8 +34,9 @@ html {
   bottom: 5%;
   left: 10%;
   color: white;
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 38px;
+  line-height: 38px;
+  font-weight: 700;
   width: 213px;
   height: 100px;
   gap: 8px;
