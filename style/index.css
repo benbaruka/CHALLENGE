@@ -32,7 +32,7 @@ html {
 .grid-item .text-overlay {
   position: absolute;
   bottom: 5%;
-  left:5%
+  left: 10%;
   color: white;
   font-size: 24px;
   font-weight: bold;
