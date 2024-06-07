@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
         item.addEventListener("mouseenter", () => {
             const img = item.querySelector("img");
             const overlay = item.querySelector(".overlay");
-            const textOverlay = item.querySelector(".text-overlay");
+            const textOverlay = item.querySelector(".text-see");
 
             img.style.filter = "grayscale(100%)";
             img.style.transform = "scale(1.1)";
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
         item.addEventListener("mouseleave", () => {
             const img = item.querySelector("img");
             const overlay = item.querySelector(".overlay");
-            const textOverlay = item.querySelector(".text-overlay");
+            const textOverlay = item.querySelector(".text-see");
 
             img.style.filter = "none";
             img.style.transform = "scale(1)";
