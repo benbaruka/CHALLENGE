@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function() {
             const img = item.querySelector("img");
             const overlay = item.querySelector(".overlay");
             const textOverlay = item.querySelector(".text-see");
-
             img.style.filter = "grayscale(100%)";
             img.style.transform = "scale(1.1)";
             overlay.style.opacity = "1";
