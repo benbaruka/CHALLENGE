@@ -7,7 +7,8 @@ html {
   justify-content: center;
   align-items: center;
   background-color: #f0f0f0;
-  font-family: sans-serif;
+  font-family: "din-condensed-variable", sans-serif;
+  font-variation-settings: "wght" 400;
 }
 
 .grid-container {
@@ -62,6 +63,18 @@ html {
   margin: 8px, 0;
   padding: 0;
 }
+.grid-item .text-see {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 3px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
 .grid-item:hover img {
   transform: scale(1.1);
   filter: grayscale(100%) blur(3px);
@@ -72,5 +85,8 @@ html {
 }
 
 .grid-item:hover .text-overlay {
+  opacity: 1;
+}
+.grid-item:hover .text-see {
   opacity: 1;
 }
