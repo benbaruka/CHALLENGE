@@ -71,7 +71,7 @@ html {
   font-size: 14px;
   border-radius: 3px;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 100ms ease;
 }
 .grid-item:hover img {
   transform: scale(1.1);
@@ -87,4 +87,14 @@ html {
 }
 .grid-item:hover .text-see {
   opacity: 1;
+}
+
+.grid-item:hover .text-see {
+  opacity: 1;
+}
+
+.grid-item .text-see .arrow {
+    display: inline-block;
+    transition: transform 100ms ease;
+    font-size: 30px; 
 }
