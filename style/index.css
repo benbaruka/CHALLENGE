@@ -58,7 +58,7 @@ html {
 }
 .grid-item .text-overlay .country {
   color: #ffffff;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   margin: 8px, 0;
   padding: 0;
@@ -68,10 +68,12 @@ html {
   bottom: 4%;
   left: 10%;
   color: white;
-  font-size: 14px;
+  font-size: 18px;
   border-radius: 3px;
   opacity: 0;
   transition: opacity 100ms ease;
+  color: #1591ea;
+  font-weight: 700;
 }
 .grid-item:hover img {
   transform: scale(1.1);
@@ -84,6 +86,7 @@ html {
 
 .grid-item:hover .text-overlay {
   opacity: 1;
+  bottom: 12%;
 }
 .grid-item:hover .text-see {
   opacity: 1;
@@ -94,7 +97,7 @@ html {
 }
 
 .grid-item .text-see .arrow {
-    display: inline-block;
-    transition: transform 100ms ease;
-    font-size: 30px; 
+  display: inline-block;
+  transition: transform 100ms ease;
+  font-size: 30px;
 }
