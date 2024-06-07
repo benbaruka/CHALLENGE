@@ -60,3 +60,15 @@ html {
   margin: 8px, 0;
   padding: 0;
 }
+.grid-item:hover img {
+  transform: scale(1.1);
+  filter: grayscale(100%);
+}
+
+.grid-item:hover .overlay {
+  opacity: 1;
+}
+
+.grid-item:hover .text-overlay {
+  opacity: 1;
+}
