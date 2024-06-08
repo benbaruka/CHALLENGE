@@ -95,7 +95,6 @@ html {
 .grid-item:hover .text-see {
   opacity: 1;
 }
-
 .grid-item .text-see .arrow {
   display: inline-block;
   transition: transform 100ms ease;
