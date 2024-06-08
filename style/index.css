@@ -89,9 +89,14 @@ html {
   bottom: 12%;
 }
 
-
 .grid-item .text-see .arrow {
   display: inline-block;
   transition: transform 100ms ease;
   font-size: 30px;
+}
+@media (max-width: 768px) {
+  .grid-item .text-overlay,
+  .grid-item .text-see {
+    display: none;
+  }
 }
