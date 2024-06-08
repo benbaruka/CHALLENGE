@@ -187,141 +187,129 @@ project-root/
     font-family: "din-condensed-variable", sans-serif;
     font-variation-settings: "wght" 400;
   }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    height: 100%;
+  }
+  .grid-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  .grid-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  .grid-item .text-overlay {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    width: 100%;
+    height: 100px;
+    gap: 4px;
+    opacity: 0px;
+    transition: opacity 300ms ease;
+  }
+  .grid-item .text-overlay .text {
+    color: #ffffff;
+    font-size: 38px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+  }
+  .grid-item .text-overlay .text p {
+    margin: 4px 0;
+  }
+  .grid-item .text-overlay .country {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 8px, 0;
+    padding: 0;
+  }
+  .grid-item .text-see {
+    position: absolute;
+    bottom: 4%;
+    left: 10%;
+    color: white;
+    font-size: 18px;
+    border-radius: 3px;
+    opacity: 0;
+    transition: opacity 300ms ease;
+    color: #7cedff;
+    font-weight: 700;
+  }
+  .grid-item:hover img {
+    transform: scale(1.1);
+    filter: grayscale(100%) blur(7px);
+  }
+  .grid-item:hover .overlay {
+    opacity: 1;
+  }
+  .grid-item:hover .text-overlay {
+    opacity: 1;
+    bottom: 14%;
+  }
+  .grid-item:hover .text-see {
+    opacity: 1;
+  }
+  .grid-item:hover .text-see {
+    opacity: 1;
+  }
+  .grid-item .text-see .arrow {
+    display: inline-block;
+    transition: transform 100ms ease;
+    font-size: 30px;
+  }
+  @media (max-width: 768px) {
+    .grid-item .text-overlay,
+    .grid-item .text-see {
+      display: none;
+    }
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 800px;
+    max-height: 80%;
+  }
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
   ```
-
-.grid-container {
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-width: 100%;
-height: 100%;
-}
-
-.grid-item {
-position: relative;
-width: 100%;
-height: 100%;
-overflow: hidden;
-}
-
-.grid-item img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-transition: transform 0.3s ease, filter 0.3s ease;
-}
-.grid-item .overlay {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: rgba(0, 0, 0, 0.4);
-}
-.grid-item .text-overlay {
-position: absolute;
-bottom: 10%;
-left: 10%;
-width: 100%;
-height: 100px;
-gap: 4px;
-opacity: 0px;
-transition: opacity 300ms ease;
-}
-.grid-item .text-overlay .text {
-color: #ffffff;
-font-size: 38px;
-font-weight: 700;
-margin: 0;
-padding: 0;
-}
-.grid-item .text-overlay .text p {
-margin: 4px 0;
-}
-.grid-item .text-overlay .country {
-color: #ffffff;
-font-size: 14px;
-font-weight: 400;
-margin: 8px, 0;
-padding: 0;
-}
-.grid-item .text-see {
-position: absolute;
-bottom: 4%;
-left: 10%;
-color: white;
-font-size: 18px;
-border-radius: 3px;
-opacity: 0;
-transition: opacity 300ms ease;
-color: #7cedff;
-font-weight: 700;
-}
-.grid-item:hover img {
-transform: scale(1.1);
-filter: grayscale(100%) blur(7px);
-}
-
-.grid-item:hover .overlay {
-opacity: 1;
-}
-
-.grid-item:hover .text-overlay {
-opacity: 1;
-bottom: 14%;
-}
-.grid-item:hover .text-see {
-opacity: 1;
-}
-
-.grid-item:hover .text-see {
-opacity: 1;
-}
-.grid-item .text-see .arrow {
-display: inline-block;
-transition: transform 100ms ease;
-font-size: 30px;
-}
-@media (max-width: 768px) {
-.grid-item .text-overlay,
-.grid-item .text-see {
-display: none;
-}
-}
-.modal {
-display: none;
-position: fixed;
-z-index: 1;
-left: 0;
-top: 0;
-width: 100%;
-height: 100%;
-overflow: auto;
-background-color: rgb(0, 0, 0);
-background-color: rgba(0, 0, 0, 0.9);
-}
-
-.modal-content {
-margin: auto;
-display: block;
-width: 80%;
-max-width: 800px;
-max-height: 80%;
-}
-
-.close {
-position: absolute;
-top: 15px;
-right: 35px;
-color: white;
-font-size: 40px;
-font-weight: bold;
-cursor: pointer;
-}
-
-```
 
 ## Summary
 
 This project creates an interactive grid of images that, when clicked, open in a full-size modal. The grid items display additional text on hover, and the text lines are converted to uppercase using a utility function. The structure and style of the project are handled through index.html and index.css, while the functionality is managed by arrayMap.js and stringTransform.js. The assets folder contains the images used in the project. To run the project, open index.html in your browser using the "Open with Live Server" option for best results.
-
-```
