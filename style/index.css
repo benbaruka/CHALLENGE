@@ -75,7 +75,7 @@ html {
   border-radius: 3px;
   opacity: 0;
   transition: opacity 300ms ease;
-  color: #4ff4a2;
+  color: #7cedff;
   font-weight: 700;
 }
 .grid-item:hover img {
