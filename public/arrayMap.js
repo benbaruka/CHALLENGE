@@ -1,66 +1,48 @@
 document.addEventListener("DOMContentLoaded", function() {
     const gridContainer = document.querySelector(".grid-container");
-
+    const template = document.querySelector(".grid-item.template");
     const imageData = [
-        { src: "/assets/image11.jpg", text: "FENNEC FOX", country: "India" },
+        { src: "/assets/image11.jpg", lines: ["FENNEC", "FOX"], country: "India" },
         {
             src: "/assets/image12.jpg",
-            text: "HUMPBACK WHALE",
+            lines: ["HUMPBACK", "WHALE"],
             country: "South Africa",
         },
         {
             src: "/assets/image13.jpg",
-            text: "COMMON BROWN BABOON",
+            lines: ["COMMON BROWN", "BABOON"],
             country: "South Africa",
         },
-        { src: "/assets/image14.jpg", text: "SPOTTED DEER", country: "Amazon" },
+        {
+            src: "/assets/image14.jpg",
+            lines: ["SPOTTED", "DEER"],
+            country: "Amazon",
+        },
     ];
 
     imageData.forEach((data) => {
-        const gridItem = document.createElement("div");
-        gridItem.classList.add("grid-item");
+        const clone = template.cloneNode(true);
+        clone.classList.remove("template");
+        clone.querySelector("img").src = data.src;
+        data.lines.forEach((line) => {
+            const lineElement = document.createElement("p");
+            lineElement.textContent = line;
+            clone.querySelector(".text-overlay .text").appendChild(lineElement); // Correction ici
+        });
+        clone.querySelector(".country").textContent = data.country;
 
-        const img = document.createElement("img");
-        img.src = data.src;
-        img.alt = `Placeholder Image`;
-        img.classList.add("img");
-
-        const overlay = document.createElement("div");
-        overlay.classList.add("overlay");
-
-        const textOverlay = document.createElement("div");
-        textOverlay.classList.add("text-overlay");
-
-        const text = document.createElement("p");
-        text.classList.add("text");
-        text.innerHTML = toUpperCaseText(data.text); // Transforme le texte en majuscules
-
-        const country = document.createElement("p");
-        country.classList.add("country");
-        country.textContent = data.country;
-
-        const textSee = document.createElement("div");
-        textSee.classList.add("text-see");
-
-        const seeMore = document.createElement("p");
-        seeMore.classList.add("see_more");
-        seeMore.innerHTML = `know more <span class="arrow">&rarr;</span>`;
-
-        textOverlay.appendChild(text);
-        textOverlay.appendChild(country);
-        textSee.appendChild(seeMore);
-        gridItem.appendChild(img);
-        gridItem.appendChild(overlay);
-        gridItem.appendChild(textOverlay);
-        gridItem.appendChild(textSee);
-        gridContainer.appendChild(gridItem);
-
-        gridItem.addEventListener("mouseenter", () => {
+        clone.addEventListener("mouseenter", () => {
+            const textSee = clone.querySelector(".text-see");
             textSee.style.opacity = "1";
         });
 
-        gridItem.addEventListener("mouseleave", () => {
+        clone.addEventListener("mouseleave", () => {
+            const textSee = clone.querySelector(".text-see");
             textSee.style.opacity = "0";
         });
+
+        gridContainer.appendChild(clone);
     });
+    // Retire l'élément modèle du DOM
+    template.remove();
 });
