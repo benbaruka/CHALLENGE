@@ -186,7 +186,7 @@ project-root/
     font-family: "din-condensed-variable", sans-serif;
     font-variation-settings: "wght" 400;
   }
-  ```
+ 
 
 .grid-container {
 display: grid;
