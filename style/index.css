@@ -88,13 +88,7 @@ html {
   opacity: 1;
   bottom: 12%;
 }
-.grid-item:hover .text-see {
-  opacity: 1;
-}
 
-.grid-item:hover .text-see {
-  opacity: 1;
-}
 
 .grid-item .text-see .arrow {
   display: inline-block;
