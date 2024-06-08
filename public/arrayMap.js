@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const gridItems = document.querySelectorAll(".grid-item");
-    //add s    const textOverlay = item.querySelector(".text-overlay");
+    const textOverlay = item.querySelector(".text");
     if (textOverlay) {
         textOverlay.textContent = toUpperCaseTextOverLey(textOverlay.textContent);
     }
