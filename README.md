@@ -39,39 +39,41 @@ project-root/
 
   ```html
   <!DOCTYPE html>
-  <html lang="en"></html>
-  ```
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>COA TASKFORCE TAKE HOME CHALLENGE</title>
-    <link href="../style/index.css" rel="stylesheet" />
-</head>
-
-<body>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>COA TASKFORCE TAKE HOME CHALLENGE</title>
+      <link href="../style/index.css" rel="stylesheet" />
+    </head>
+  </html>
+  <body>
     <div class="grid-container">
-        <div class="grid-item template">
-            <img src="" alt="Placeholder Image" class="img" />
-            <div class="overlay"></div>
-            <div class="text-overlay">
-                <p class="text"></p>
-                <p class="country"></p>
-            </div>
-            <div class="text-see">
-                <p class="see_more">know more <span class="arrow">&rarr;</span></p>
-            </div>
+      <div class="grid-item template">
+        <img src="" alt="Placeholder Image" class="img" />
+        <div class="overlay"></div>
+        <div class="text-overlay">
+          <p class="text"></p>
+          <p class="country"></p>
         </div>
+        <div class="text-see">
+          <p class="see_more">know more <span class="arrow">&rarr;</span></p>
+        </div>
+      </div>
     </div>
     <div id="modal" class="modal">
-        <span class="close">&times;</span>
-        <img id="fullsize-image" class="modal-content" src="" alt="Fullsize Image" />
+      <span class="close">&times;</span>
+      <img
+        id="fullsize-image"
+        class="modal-content"
+        src=""
+        alt="Fullsize Image"
+      />
     </div>
     <script src="./arrayMap.js"></script>
     <script src="./stringTransform.js"></script>
-</body>
-
-</html>
+  </body>
+  </html>
   ```
 
 - **arrayMap.js**: This JavaScript file handles the dynamic generation of the grid items, including setting up event listeners for interactions such as opening and closing the modal and displaying additional text when the user hovers over an image.
@@ -186,7 +188,7 @@ project-root/
     font-family: "din-condensed-variable", sans-serif;
     font-variation-settings: "wght" 400;
   }
- 
+  ```
 
 .grid-container {
 display: grid;
@@ -323,3 +325,4 @@ cursor: pointer;
 
 This project creates an interactive grid of images that, when clicked, open in a full-size modal. The grid items display additional text on hover, and the text lines are converted to uppercase using a utility function. The structure and style of the project are handled through index.html and index.css, while the functionality is managed by arrayMap.js and stringTransform.js. The assets folder contains the images used in the project. To run the project, open index.html in your browser using the "Open with Live Server" option for best results.
 
+```
