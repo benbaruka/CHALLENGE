@@ -46,33 +46,32 @@ project-root/
       <title>COA TASKFORCE TAKE HOME CHALLENGE</title>
       <link href="../style/index.css" rel="stylesheet" />
     </head>
-  </html>
-  <body>
-    <div class="grid-container">
-      <div class="grid-item template">
-        <img src="" alt="Placeholder Image" class="img" />
-        <div class="overlay"></div>
-        <div class="text-overlay">
-          <p class="text"></p>
-          <p class="country"></p>
-        </div>
-        <div class="text-see">
-          <p class="see_more">know more <span class="arrow">&rarr;</span></p>
+    <body>
+      <div class="grid-container">
+        <div class="grid-item template">
+          <img src="" alt="Placeholder Image" class="img" />
+          <div class="overlay"></div>
+          <div class="text-overlay">
+            <p class="text"></p>
+            <p class="country"></p>
+          </div>
+          <div class="text-see">
+            <p class="see_more">know more <span class="arrow">&rarr;</span></p>
+          </div>
         </div>
       </div>
-    </div>
-    <div id="modal" class="modal">
-      <span class="close">&times;</span>
-      <img
-        id="fullsize-image"
-        class="modal-content"
-        src=""
-        alt="Fullsize Image"
-      />
-    </div>
-    <script src="./arrayMap.js"></script>
-    <script src="./stringTransform.js"></script>
-  </body>
+      <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img
+          id="fullsize-image"
+          class="modal-content"
+          src=""
+          alt="Fullsize Image"
+        />
+      </div>
+      <script src="./arrayMap.js"></script>
+      <script src="./stringTransform.js"></script>
+    </body>
   </html>
   ```
 
