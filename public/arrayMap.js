@@ -8,17 +8,17 @@ document.addEventListener("DOMContentLoaded", function() {
         { src: "/assets/image11.jpg", lines: ["fennec", "fox"], country: "India" },
         {
             src: "/assets/image12.jpg",
-            lines: ["HUMPBACK", "WHALE"],
+            lines: ["humpback", "whale"],
             country: "South Africa",
         },
         {
             src: "/assets/image13.jpg",
-            lines: ["COMMON BROWN", "BABOON"],
+            lines: ["common brown", "baboon"],
             country: "South Africa",
         },
         {
             src: "/assets/image14.jpg",
-            lines: ["SPOTTED", "DEER"],
+            lines: ["spotted", "deer"],
             country: "Amazon",
         },
     ];
