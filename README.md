@@ -322,4 +322,4 @@ cursor: pointer;
 ## Summary
 
 This project creates an interactive grid of images that, when clicked, open in a full-size modal. The grid items display additional text on hover, and the text lines are converted to uppercase using a utility function. The structure and style of the project are handled through index.html and index.css, while the functionality is managed by arrayMap.js and stringTransform.js. The assets folder contains the images used in the project. To run the project, open index.html in your browser using the "Open with Live Server" option for best results.
-```
+
