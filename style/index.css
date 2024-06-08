@@ -37,17 +37,17 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.4);
 }
 .grid-item .text-overlay {
   position: absolute;
   bottom: 10%;
   left: 10%;
-  width: 213px;
+  width: 100%;
   height: 100px;
   gap: 4px;
   opacity: 0px;
-  transition: opacity 100ms ease;
+  transition: opacity 300ms ease;
 }
 .grid-item .text-overlay .text {
   color: #ffffff;
@@ -71,13 +71,13 @@ html {
   font-size: 18px;
   border-radius: 3px;
   opacity: 0;
-  transition: opacity 100ms ease;
+  transition: opacity 300ms ease;
   color: #1591ea;
   font-weight: 700;
 }
 .grid-item:hover img {
   transform: scale(1.1);
-  filter: grayscale(100%) blur(3px);
+  filter: grayscale(100%) blur(7px);
 }
 
 .grid-item:hover .overlay {
