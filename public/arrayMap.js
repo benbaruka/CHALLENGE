@@ -23,26 +23,24 @@ document.addEventListener("DOMContentLoaded", function() {
         },
     ];
 
-
     function openModal(src) {
         fullsizeImage.src = src;
         modal.style.display = "block";
     }
 
-
     function closeModal() {
         modal.style.display = "none";
     }
-
 
     imageData.forEach((data) => {
         const clone = template.cloneNode(true);
         clone.classList.remove("template");
         clone.querySelector("img").src = data.src;
+
         data.lines.forEach((line) => {
             const lineElement = document.createElement("p");
-            lineElement.textContent = line;
-            clone.querySelector(".text-overlay .text").appendChild(lineElement); // Correction ici
+            lineElement.textContent = toUpperCaseTextOverLey(line);
+            clone.querySelector(".text-overlay .text").appendChild(lineElement);
         });
         clone.querySelector(".country").textContent = data.country;
 
