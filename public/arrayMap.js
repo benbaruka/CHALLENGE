@@ -5,19 +5,19 @@ document.addEventListener("DOMContentLoaded", function() {
     const closeButton = document.querySelector(".close");
     const template = document.querySelector(".grid-item.template");
     const imageData = [
-        { src: "/assets/imaage14.jpg", lines: ["fennec", "fox"], country: "India" },
+        { src: "/assets/imaage14.jpeg", lines: ["fennec", "fox"], country: "India" },
         {
-            src: "/assets/imaage11.jpg",
+            src: "/assets/imaage11.jpeg",
             lines: ["humpback", "whale"],
             country: "South Africa",
         },
         {
-            src: "/assets/imaage13.jpg",
+            src: "/assets/imaage13.jpeg",
             lines: ["common brown", "baboon"],
             country: "South Africa",
         },
         {
-            src: "/assets/imaage12.jpg",
+            src: "/assets/imaage12.jpeg",
             lines: ["spotted", "deer"],
             country: "Amazon",
         },
